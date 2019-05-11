@@ -1,0 +1,34 @@
+﻿@model IList<Student>
+
+@{
+    ViewData["Title"] = "ViewAllStudents";
+}
+
+<h1>ViewAllStudents</h1>
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Email</th>
+            <th>Username</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (Student x in Model)
+            {
+            <tr>
+                <td>@x.Name</td>
+                <td>@x.Email</td>
+                <td>@x.Username</td>
+                <td> <a href="/Student/EditDetail?Eid=@x.Id">Edit</a> | <a href="/Student/ViewDetail?Sid=@x.Id">Detail</a> | <a href="/Student/DeleteStudent?Did=@x.Id">Delete</a> </td>
+            </tr>
+
+            }
+        }
+
+
+</table>

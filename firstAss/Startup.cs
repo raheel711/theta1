@@ -46,6 +46,8 @@ namespace firstAss
             services.AddDbContext<thetaContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("MyCS")));
+
+
             services.AddDefaultIdentity<IdentityUser>()
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<thetaContext>();

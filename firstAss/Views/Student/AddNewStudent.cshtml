@@ -1,0 +1,17 @@
+﻿@model Student
+@{
+    ViewData["Title"] = "AddNewStudent";
+}
+
+<h1>AddNewStudent</h1>
+
+<form asp-action="AddNewStudent" asp-controller="Student">
+
+    Name: <input type="text" asp-for="Name" required>
+    <br><br>
+    Email: <input type="email" asp-for="Email" required>
+    <br><br>
+    Username: <input type="text" asp-for="Username" required>
+    <br><br><br><br>
+    <input type="submit">
+</form>
